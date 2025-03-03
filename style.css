@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-div {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
