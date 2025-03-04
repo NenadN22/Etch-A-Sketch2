@@ -10,12 +10,27 @@ function createGrid(rows) {
         gridDiv.addEventListener('mouseover', () => {
             gridDiv.style.backgroundColor  = 'black';
         })
+        const colorButton = document.querySelector('.random-color')
+        colorButton.addEventListener('click', () => {
+            gridDiv.addEventListener('mouseover', () => {
+                gridDiv.style.backgroundColor  =  getRandomColor();
+            })
+        })
         
         
     }
 }
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  
 function buttonPrompt(){
-    const promptButton = document.querySelector('button')
+    const promptButton = document.querySelector('.change-size')
     let choice = '';
     promptButton.addEventListener('click', () => {
             choice =  prompt('How many grid you want from 0 to 100?')
@@ -28,6 +43,7 @@ function buttonPrompt(){
     })
     
 }
+
 
 
 createGrid(16)

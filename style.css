@@ -8,6 +8,11 @@ body {
     flex-direction: column;
     gap: 5vh;
 }
+h2 {
+    font-family: 'Roboto',sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
 .container {
     width: 500px;
     height: 500px;
@@ -19,4 +24,8 @@ body {
 
 button {
     padding: 10px;
+}
+.buttons {
+    display: flex;
+    gap: 3vw;
 }
