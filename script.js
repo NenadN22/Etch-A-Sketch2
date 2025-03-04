@@ -1,5 +1,5 @@
 const container = document.querySelector('.container')
-// Create function 
+// Create function  for grid divs cretion in container
 function createGrid(rows) {
     for(let i = 0; i < rows * rows; i++) {
        const gridDiv = document.createElement('div')
@@ -9,17 +9,10 @@ function createGrid(rows) {
         gridDiv.style.height = `${container.clientHeight / rows }px`;
         gridDiv.addEventListener('mouseover', () => {
             gridDiv.style.backgroundColor  = 'black';
-        })
-        const colorButton = document.querySelector('.random-color')
-        colorButton.addEventListener('click', () => {
-            gridDiv.addEventListener('mouseover', () => {
-                gridDiv.style.backgroundColor  =  getRandomColor();
-            })
-        })
-        
-        
+        })   
     }
 }
+// Create function for random colors
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -28,7 +21,7 @@ function getRandomColor() {
     }
     return color;
   }
-  
+// Create function for button prompt when user click button to choose how many grids want
 function buttonPrompt(){
     const promptButton = document.querySelector('.change-size')
     let choice = '';
@@ -43,6 +36,18 @@ function buttonPrompt(){
     })
     
 }
+// Create event listener for random colors on divs 
+const colorButton = document.querySelector('.random-color');
+colorButton.addEventListener('click', () => {
+    const allGridDivs = document.querySelectorAll('.grid-div')
+    allGridDivs.forEach(gridDiv => {
+        gridDiv.addEventListener('mouseover',() => {
+            gridDiv.style.backgroundColor = getRandomColor()
+        })
+
+    })
+    }
+)
 
 
 
