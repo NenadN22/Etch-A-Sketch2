@@ -5,15 +5,18 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
 }
 .container {
     width: 500px;
     height: 500px;
-    background-color: aquamarine;
+    border: 1px solid  black;
     display: flex;
     flex-wrap: wrap;
-}
-.grid-div {
-    border: 1px solid black;
     box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
 }
