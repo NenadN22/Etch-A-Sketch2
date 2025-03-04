@@ -27,8 +27,9 @@ function buttonPrompt(){
     let choice = '';
     promptButton.addEventListener('click', () => {
             choice =  prompt('How many grid you want from 0 to 100?')
-            if(choice > 100) {
+            if(isNaN(choice)||choice > 100 || choice < 0) {
                 choice = prompt('Not available choose from 0 to  100?')
+                return
             } 
             console.log(choice)
             container.innerHTML = '';
